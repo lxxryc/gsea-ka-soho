@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>GSEA KA SOHO BOYS — Profiles</title>
+
+<style>
+:root {
+  --accent-blue: #1f6feb;
+  --accent-gold: #fbbf24;
+  --muted: #6b7280;
+  --bg: #f3f7ff;
+  --panel: #fff;
+  --radius: 14px;
+  --max-width: 1100px;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: #04172a;
+}
+
+header {
+  background: var(--panel);
+  border-bottom: 1px solid #e5e7eb;
+  padding: 14px 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 30px auto 80px;
+  padding: 0 20px;
+}
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  border-left: 5px solid var(--accent-blue);
+  padding-left: 10px;
+}
+
+/* Search bar */
+.search-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.search {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+}
+
+/* Profile grids */
+.profiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.member {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.avatar-wrap {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 8px;
+  position: relative;
+}
+
+.avatar-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 999px;
+  background: conic-gradient(#ff0080, #7928ca, #2af598, #ff0080);
+  animation: spin 3s linear infinite;
+  z-index: 0;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text */
+.member-name {
+  display: block;
+  font-weight: 700;
+  color: #04172a;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.member-role {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Admin color style */
+.admin .avatar-wrap::before {
+  background: conic-gradient(var(--accent-gold), #f97316, var(--accent-gold));
+}
+.admin .member-name {
+  color: #b45309;
+}
+
+/* Animation (already in your code) */
+@keyframes spin {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,0.9);
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>GSEA KA SOHO</header>
+
+<main>
+
+  <div class="search-row">
+    <input id="search" class="search" type="search" placeholder="Search names...">
+  </div>
+
+
+  <h2>Admins</h2>
+
+  <!-- Admin Grid 1 -->
+
+
+  <section class="profiles">
+
+    
+    <a href="https://www.facebook.com/share/1QuBKFiXPq/" target="_blank" class="member admin">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img src="https://i.pinimg.com/1200x/d2/a6/6e/d2a66e720484d5a6b8ae6113087a48df.jpg" >
+        </div>
+      </div>
+      <span class="member-name">Perdita</span>
+      <div class="member-role"></div>
+    </a>
+    
+
+    
+
+    <a href="https://www.facebook.com/share/1FzrUVWkpz/" target="_blank" class="member admin">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img src="https://i.pinimg.com/736x/03/5d/ab/035dab773f7a307f8252b95916d9ae26.jpg">
+        </div>
+      </div>
+      <span class="member-name">Adsila</span>
+      <div class="member-role"></div>
+    </a>
+  </section>
+
+  <section class="profiles">
+    <a href="https://www.facebook.com/share/175iBFGrip/" target="_blank" class="member admin">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img src="https://i.pinimg.com/736x/3d/d0/3e/3dd03ea7d8fe4b6dea877bb04bbabf97.jpg" >
+        </div>
+      </div>
+      <span class="member-name">Aereia</span>
+      <div class="member-role"></div>
+    </a>
+
+    
+
+    <a href="https://www.facebook.com/share/1aJPMV6feF" target="_blank" class="member admin">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img src="https://i.pinimg.com/736x/63/bc/ad/63bcad8df513ebebf0ab8ad8860474a3.jpg" >
+        </div>
+      </div>
+      <span class="member-name">Fawn</span>
+      <div class="member-role"></div>
+    </a>
+  </section>
+
+   <!-- Admin Grid 1 -->
+  <section class="profiles">
+    <a href="https://www.facebook.com/share/1BU34eYZd6/" target="_blank" class="member admin">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img src="https://i.pinimg.com/736x/1c/be/c9/1cbec934dd199540d2a556f1a2445ba4.jpg" >
+        </div>
+      </div>
+      <span class="member-name">Longganisa</span>
+      <div class="member-role"></div>
+    </a>
+
+    <a href="https://web.facebook.com/neuraforia" target="_blank" class="member admin">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img src="https://i.pinimg.com/736x/d0/7e/80/d07e809c14e5e0f1e692843df71b6367.jpg" >
+        </div>
+      </div>
+      <span class="member-name">Neura</span>
+      <div class="member-role"></div>
+    </a>
+  </section>
+
+  <!-- Admin Grid 2 -->
+  <section class="profiles">
+    <a href="https://web.facebook.com/nezlec" target="_blank" class="member admin">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img src="https://i.pinimg.com/736x/59/7c/df/597cdfc384a042b499adac3a90393024.jpg" >
+        </div>
+      </div>
+      <span class="member-name">Nezadie</span>
+      <div class="member-role"></div>
+    </a>
+
+    <a href="https://web.facebook.com/profile.php?id=61573004891638" target="_blank" class="member admin">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img src="https://i.pinimg.com/736x/38/64/58/3864582b198937fe2f7707d49f62674f.jpg" >
+        </div>
+      </div>
+      <span class="member-name">Owen</span>
+      <div class="member-role">Admin</div>
+    </a>
+  </section>
+
+  <section class="profiles">
+    <a href="https://web.facebook.com/profile.php?id=100066685080166" target="_blank" class="member admin">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img src="https://i.pinimg.com/736x/bd/9c/26/bd9c26bc3eeb9eabecfde4f677527780.jpg" >
+        </div>
+      </div>
+      <span class="member-name">Raeli</span>
+      <div class="member-role"></div>
+    </a>
+
+    <a href="https://web.facebook.com/profile.php?id=61579160990581" target="_blank" class="member admin">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img src="https://i.pinimg.com/736x/05/9a/4f/059a4faf112edfa6fe17c68317c08da3.jpg" >
+        </div>
+      </div>
+      <span class="member-name">Soya</span>
+      <div class="member-role">Admin</div>
+    </a>
+  </section>
+
+  <!-- MEMBERS -->
+  <h2>Members</h2>
+
+  <!-- Member Grid 1 -->
+  <section class="profiles">
+    <a href="https://web.facebook.com/lx.ryc/" target="_blank" class="member">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img src="https://scontent.fceb2-1.fna.fbcdn.net/v/t39.30808-1/558004238_122144080298877366_996476971602138648_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeHv0I9btWxHUpCOKiei7QFiOXIKviDWjaU5cgq-INaNpSd2B1beOOlm5VyTLKBUQgqOpl9UW402qnxdfJwgU3Ri&_nc_ohc=SKZPpm7TaH0Q7kNvwEfO2UQ&_nc_oc=AdkqzPCjRGCSRZTlInvvyewFOyUBvIvUO0sOfZU2VQLZQ-7ozfyQFXSWevl9H9Z5sEk&_nc_zt=24&_nc_ht=scontent.fceb2-1.fna&_nc_gid=E6QYxPYRMVC0_k9VlM7tlw&oh=00_AfcrvtsJsxXdIRpP5yUMTITgxu5V_ngjxincyDSIp3I71A&oe=68E9AE73" >
+        </div>
+      </div>
+      <span class="member-name">Louis</span>
+      <div class="member-role"></div>
+    </a>
+
+    <a href="https://web.facebook.com/sam.yvanne.75436531" target="_blank" class="member">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img src="https://i.pinimg.com/1200x/65/48/9c/65489cc392ea91ae5a2d92b7f61ba4ab.jpg" >
+        </div>
+      </div>
+      <span class="member-name">Sam</span>
+      <div class="member-role"></div>
+    </a>
+  </section>
+
+    <section class="profiles">
+    <a href="https://web.facebook.com/nahvirnya" target="_blank" class="member">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img src="https://i.pinimg.com/736x/cf/a8/c9/cfa8c91ac3b8cfa7baf3113a232b1b6c.jpg" >
+        </div>
+      </div>
+      <span class="member-name">Adiya</span>
+      <div class="member-role"></div>
+    </a>
+
+    <a href="https://web.facebook.com/Zhian.vera" target="_blank" class="member">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img src="https://i.pinimg.com/736x/2a/63/eb/2a63ebab51f4cdb457cf2d53e3da01d7.jpg" alt="Member Two">
+        </div>
+      </div>
+      <span class="member-name">Zhianna</span>
+      <div class="member-role"></div>
+    </a>
+  </section>
+  <!-- Member Grid 2 -->
+  <section class="profiles">
+    <a href="https://web.facebook.com/profile.php?id=61580279987016" target="_blank" class="member">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img src="https://i.pinimg.com/736x/ad/8a/cd/ad8acde48d77ae3e5a568a0af68a6559.jpg" alt="Member Three">
+        </div>
+      </div>
+      <span class="member-name">Jzer</span>
+      <div class="member-role"></div>
+    </a>
+
+    <a href="https://web.facebook.com/S4ndwichh" target="_blank" class="member">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img src="https://i.pinimg.com/1200x/12/5b/19/125b1912926ce2ecda19be6f77d685c3.jpg" alt="Member Four">
+        </div>
+      </div>
+      <span class="member-name">Lance</span>
+      <div class="member-role"></div>
+    </a>
+  </section>
+
+</main>
+
+<footer>
+  © 2025 GSEA KA SOHO — All rights reserved.
+</footer>
+
+<script>
+
+const searchInput = document.getElementById('search');
+searchInput.addEventListener('input', e => {
+  const q = e.target.value.toLowerCase();
+  document.querySelectorAll('.member').forEach(m => {
+    const name = m.querySelector('.member-name').textContent.toLowerCase();
+    m.style.display = name.includes(q) ? '' : 'none';
+  });
+});
+</script>
+
+</body>
+</html>
