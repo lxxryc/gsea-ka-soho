@@ -32,7 +32,6 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
-
 header {
   text-align: center;
   margin: 10px;
@@ -69,26 +68,20 @@ header h1 {
   display: inline-block;
 }
 
-/* Continuous infinite flow */
 @keyframes flowingGradient {
   from { background-position: 0% 0; }
   to   { background-position: -1000% 0; } 
 }
 
-
-
-
-
 h2 {
   margin-top: 50px;
   margin-bottom: 20px;
-  margin-left: 20px; /* 👈 shifts it away from the edge */
+  margin-left: 20px;
   font-size: 20px;
   font-weight: 700;
   border-left: 5px solid var(--accent-blue);
   padding-left: 10px;
 }
-
 
 /* Search bar */
 .search-row {
@@ -202,6 +195,68 @@ footer {
   .avatar-wrap { width: 100px; height: 100px; }
   h2 { font-size: 18px; }
 }
+
+/* 🌟 Crown beside name */
+.crowned .member-name {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.crowned .member-name {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.crowned .member-name {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.crowned .member-name::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQufB4cyo4jl95mwtof6ecTkxtn4ORolrBiPQ&s') no-repeat center / contain;
+  position: relative;
+  border-radius: 50%;
+  animation: crownLive 1.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 5px #facc15);
+}
+
+/* 👑 Smooth infinite bounce + shimmer */
+@keyframes crownLive {
+  0% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 4px #facc15);
+  }
+  25% {
+    transform: translateY(-2px) scale(1.08);
+    filter: drop-shadow(0 0 10px #fde047);
+  }
+  50% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 6px #fbbf24);
+  }
+  75% {
+    transform: translateY(-1px) scale(1.05);
+    filter: drop-shadow(0 0 12px #facc15);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 4px #facc15);
+  }
+}
+
+
 </style>
 </head>
 
@@ -235,20 +290,18 @@ footer {
     <a href="https://web.facebook.com/neuraforia" target="_blank" class="member admin">
       <div class="avatar-wrap"><div class="avatar"><img src="https://i.pinimg.com/736x/d0/7e/80/d07e809c14e5e0f1e692843df71b6367.jpg" alt="Neura"></div></div><span class="member-name">Neura</span>
     </a>
-    <a href="https://web.facebook.com/nezlec" target="_blank" class="member admin">
+    <a href="https://web.facebook.com/nezlec" target="_blank" class="member admin crowned">
       <div class="avatar-wrap"><div class="avatar"><img src="https://i.pinimg.com/736x/59/7c/df/597cdfc384a042b499adac3a90393024.jpg" alt="Nezadie"></div></div><span class="member-name">Nezadie</span>
     </a>
     <a href="https://web.facebook.com/profile.php?id=61579160990581" target="_blank" class="member admin">
       <div class="avatar-wrap"><div class="avatar"><img src="https://i.pinimg.com/736x/05/9a/4f/059a4faf112edfa6fe17c68317c08da3.jpg" alt="Soya"></div></div><span class="member-name">Soya</span>
     </a>
-    <a href="https://web.facebook.com/profile.php?id=61573004891638" target="_blank" class="member admin">
+    <a href="https://web.facebook.com/profile.php?id=61573004891638" target="_blank" class="member admin ">
       <div class="avatar-wrap"><div class="avatar"><img src="https://i.pinimg.com/736x/38/64/58/3864582b198937fe2f7707d49f62674f.jpg" alt="Owen"></div></div><span class="member-name">Owen</span>
     </a>
     <a href="https://web.facebook.com/profile.php?id=100066685080166" target="_blank" class="member admin">
       <div class="avatar-wrap"><div class="avatar"><img src="https://i.pinimg.com/736x/bd/9c/26/bd9c26bc3eeb9eabecfde4f677527780.jpg" alt="Raeli"></div></div><span class="member-name">Raeli</span>
     </a>
-    
-   
   </section>
 
   <h2>Members</h2>
@@ -271,7 +324,6 @@ footer {
     <a href="https://web.facebook.com/S4ndwichh" target="_blank" class="member">
       <div class="avatar-wrap"><div class="avatar"><img src="https://i.pinimg.com/1200x/12/5b/19/125b1912926ce2ecda19be6f77d685c3.jpg" alt="Lance"></div></div><span class="member-name">Lance</span>
     </a>
-   
   </section>
 </main>
 
