@@ -140,7 +140,7 @@ h2 {
   position: absolute;
   inset: -3px;
   border-radius: 50%;
-  background: conic-gradient(gray, black);
+  background: conic-gradient();
   animation: spin 3s linear infinite;
   z-index: 0;
 }
@@ -209,6 +209,58 @@ footer {
 }
 
 /* Right emoji */
+.owner .member-name::after {
+  content: "👑";
+  display: inline-block;
+  width: 18px;
+  height: 20px;
+  line-height: 18px;
+  text-align: center;
+  font-size: 16px;
+  vertical-align: middle;
+  margin-left: 4px;
+  min-width: 18px;  /* <-- reserve space */
+  border-radius: 50%;
+  position: relative;
+  animation: crownLive 1.5s ease-in-out infinite;
+  background: url('') no-repeat center / contain;
+}
+
+.co-owner .member-name::after {
+  content: "🌟";
+  display: inline-block;
+  width: 18px;
+  height: 20px;
+  line-height: 18px;
+  text-align: center;
+  font-size: 16px;
+  vertical-align: middle;
+  margin-left: 4px;
+  min-width: 18px;  /* <-- reserve space */
+  border-radius: 50%;
+  position: relative;
+  animation: crownLive 1.5s ease-in-out infinite;
+  background: url('') no-repeat center / contain;
+}
+
+
+.developer .member-name::after {
+  content: "⚙️";
+  display: inline-block;
+  width: 18px;
+  height: 20px;
+  line-height: 18px;
+  text-align: center;
+  font-size: 16px;
+  vertical-align: middle;
+  margin-left: 4px;
+  min-width: 18px;  /* <-- reserve space */
+  border-radius: 50%;
+  position: relative;
+  animation: crownLive 1.5s ease-in-out infinite;
+  background: url('') no-repeat center / contain;
+}
+
 .sign .member-name::after {
   content: "👑";
   display: inline-block;
@@ -226,22 +278,32 @@ footer {
   background: url('') no-repeat center / contain;
 }
 
-.co-admin .member-name::after {
-  content: "🌟";
-  display: inline-block;
-  width: 18px;
-  height: 20px;
-  line-height: 18px;
-  text-align: center;
-  font-size: 16px;
-  vertical-align: middle;
-  margin-left: 4px;
-  min-width: 18px;  /* <-- reserve space */
-  border-radius: 50%;
-  position: relative;
-  animation: crownLive 1.5s ease-in-out infinite;
-  background: url('') no-repeat center / contain;
+
+/*  gradient border for Perdita */
+.special-border .avatar-wrap::before {
+  background: conic-gradient(
+    from 0deg,
+    #ff0080,
+    #ff8c00,
+    #fbbf24,
+    #00dfd8,
+    #007cf0,
+    #7928ca,
+    #ff0080
+  );
+  animation: gradientSpin 3s linear infinite;
+  inset: -4px;
 }
+
+/*  slow, smooth gradient spin */
+@keyframes gradientSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
 
 /* Left emoji */
 .sign-left .member-name::before {
@@ -271,6 +333,64 @@ footer {
 }
 
 
+
+
+
+/* 🌈 Animated gradient border only (image stays still) */
+.special-border .avatar-wrap {
+  position: relative;
+  border-radius: 50%;
+  overflow: visible;
+}
+
+/* The animated gradient ring */
+.special-border .avatar-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -3px; /* controls border thickness */
+  border-radius: 50%;
+  background: conic-gradient(
+    black,
+    black,
+    #fbbf24,
+    #00dfd8,
+    #007cf0,
+    #7928ca,
+    #ff0080,
+  );
+  animation: spinBorder 5s linear infinite;
+  z-index: 0;
+}
+
+/* Keeps the actual avatar image on top and perfectly round */
+.special-border .avatar {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.special-border .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Smooth rotating border animation */
+@keyframes spinBorder {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
 </style>
 </head>
 <body>
@@ -284,7 +404,7 @@ footer {
 
   <h2>Admins</h2>
   <section class="profiles">
-    <a href="https://www.facebook.com/share/1QuBKFiXPq/" target="_blank" class="member admin sign">
+    <a href="https://www.facebook.com/share/1QuBKFiXPq/" target="_blank" class="member admin owner special-border">
       <div class="avatar-wrap"><div class="avatar"><img src="https://i.pinimg.com/736x/45/2f/3a/452f3a19a16758a5be26a2cb9d9198e2.jpg"></div></div><span class="member-name">Perdita</span>
     </a>
     <a href="https://www.facebook.com/share/1FzrUVWkpz/" target="_blank" class="member admin">
@@ -305,8 +425,8 @@ footer {
     <a href="https://web.facebook.com/nezlec" target="_blank" class="member admin">
       <div class="avatar-wrap"><div class="avatar"><img src="https://i.pinimg.com/736x/59/7c/df/597cdfc384a042b499adac3a90393024.jpg"></div></div><span class="member-name">Nezadie</span>
     </a>
-    <a href="https://web.facebook.com/profile.php?id=61579160990581" target="_blank" class="member admin co-admin">
-      <div class="avatar-wrap"><div class="avatar"><img src="https://i.pinimg.com/736x/05/9a/4f/059a4faf112edfa6fe17c68317c08da3.jpg"></div></div><span class="member-name">Soya</span>
+    <a href="https://web.facebook.com/profile.php?id=61579160990581" target="_blank" class="member admin co-owner">
+      <div class="avatar-wrap"><div class="avatar"><img src="https://i.pinimg.com/1200x/b1/56/b5/b156b5b0e80c03b3dabbf34245110019.jpg"></div></div><span class="member-name">Soya</span>
     </a>
     <a href="https://web.facebook.com/profile.php?id=61573004891638" target="_blank" class="member admin ">
       <div class="avatar-wrap"><div class="avatar"><img src="https://i.pinimg.com/736x/38/64/58/3864582b198937fe2f7707d49f62674f.jpg"></div></div><span class="member-name">Owen</span>
@@ -318,7 +438,7 @@ footer {
 
   <h2>Members</h2>
   <section class="profiles">
-    <a href="https://web.facebook.com/lx.ryc/" target="_blank" class="member">
+    <a href="https://web.facebook.com/lx.ryc/" target="_blank" class="member ">
       <div class="avatar-wrap"><div class="avatar"><img src="https://i.pinimg.com/736x/9b/a0/41/9ba0414e5bddb60fc01a2fd0f5292001.jpg" alt="Louís"></div></div><span class="member-name">Louís</span>
     </a>
     <a href="https://web.facebook.com/sam.yvanne.75436531" target="_blank" class="member">
